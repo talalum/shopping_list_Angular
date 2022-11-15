@@ -5,11 +5,11 @@ import {FormBuilder, FormControl, Validators} from "@angular/forms";
 
 
 @Component({
-  selector: 'app-super-market-list',
-  templateUrl: './super-market-list.component.html',
-  styleUrls: ['./super-market-list.component.scss']
+  selector: 'app-shopping-list',
+  templateUrl: './shopping-list.component.html',
+  styleUrls: ['./shopping-list.component.scss']
 })
-export class SuperMarketListComponent implements OnInit {
+export class ShoppingListComponent implements OnInit {
 
   public tabs: Category[] = [
     {
@@ -37,7 +37,10 @@ export class SuperMarketListComponent implements OnInit {
       products: ['asfxxa', 'asfasb']
     },
   ];
-  public selectedCategory: Category | undefined;
+  public selectedCategory: Category = {
+    name: Categories.MeatAndFish,
+    products: ['reere', 'b', 'aasasasa']
+  };
   public errorFlag: boolean = false;
   public productName!: FormControl;
 
@@ -45,8 +48,12 @@ export class SuperMarketListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedCategory = this.tabs[0];
-    console.log(this.tabs)
+    // this.selectedCategory = this.tabs[0];
+    // this.selectedCategory = {
+    //   name: Categories.MeatAndFish,
+    //   products: ['reere', 'b', 'aasasasa']
+    // };
+    // console.log(this.tabs)
     this.productName = this.fb.control(null, [
       Validators.required,
     ]);
