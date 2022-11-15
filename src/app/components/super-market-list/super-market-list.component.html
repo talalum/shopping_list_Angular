@@ -1,0 +1,18 @@
+<div class="super-market-list">
+  <div class="title">SUPER MARKET LIST</div>
+  <div class="category-row">
+    <div class="category" *ngFor="let category of tabs" (click)="setSelectedCategory(category)"
+         [ngClass]="{'tab-selected' : category.name === selectedCategory?.name}">{{category.name}}</div>
+  </div>
+  <div class="products-container" *ngIf="!errorFlag; else notP;">
+    <div class="category-products" *ngFor="let p of selectedCategory?.products; let i = index">
+      <div class="product-name">{{p}}</div>
+      <div class="delete-product" (click)="deleteProduct(i)">X</div>
+    </div>
+  </div>
+  <ng-template class="error-message" #notP>
+    <p>There is no products in this category: {{selectedCategory?.name}}</p>
+  </ng-template>
+  <input type="text" class="input-product-name" placeholder="Enter name of product" [formControl]="productName" >
+  <button class="add-btn" (click)="addProduct(productName)">Add product</button>
+</div>

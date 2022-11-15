@@ -1,0 +1,82 @@
+.super-market-list {
+  padding-left: 80px;
+
+  .title {
+    text-align: center;
+    color: #198fad;
+    font-size: 26px;
+  }
+
+  .category-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 8px;
+    width: 80%;
+
+    .category {
+      width: max-content;
+      height: max-content;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .tab-selected {
+      //color: #ade4f3;
+      color: #198fad;
+      font-weight: 500;
+    }
+  }
+  .error-message{
+    color: red;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+  }
+  .input-product-name{
+    width: max-content;
+    height: max-content;
+    //border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    margin-right: 8px;
+  }
+
+  .add-btn{
+    background-color: #8ce885;
+    color: black;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+  }
+
+  .products-container {
+    //background-color: salmon;
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-products {
+    padding: 10px;
+    align-products: flex-end;
+    height: 29px;
+    border: 1px solid green;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+  .delete-product {
+    cursor: pointer;
+  }
+  .delete-product:hover {
+    color: red;
+  }
+}
+
