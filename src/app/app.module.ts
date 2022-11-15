@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { CategoryTabComponent } from './components/category-tab/category-tab.component';
 import { HeaderComponent } from './components/header/header.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { ShoppingListComponent } from './components/super-market-list/shopping-list.component';
+import {ShoppingListComponent} from "./components/shopping-list/shopping-list.component";
 
 @NgModule({
   declarations: [

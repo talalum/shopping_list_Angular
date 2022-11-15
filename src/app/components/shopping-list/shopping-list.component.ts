@@ -37,10 +37,7 @@ export class ShoppingListComponent implements OnInit {
       products: ['asfxxa', 'asfasb']
     },
   ];
-  public selectedCategory: Category = {
-    name: Categories.MeatAndFish,
-    products: ['reere', 'b', 'aasasasa']
-  };
+  public selectedCategory: Category = this.tabs[0];
   public errorFlag: boolean = false;
   public productName!: FormControl;
 
