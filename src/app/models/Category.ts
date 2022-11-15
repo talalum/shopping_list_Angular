@@ -1,4 +1,4 @@
 export class Category {
-  name?: string;
-  products?: any[];
+  name!: string;
+  products!: any[];
 }

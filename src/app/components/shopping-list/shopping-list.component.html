@@ -1,4 +1,4 @@
-<div class="super-market-list">
+<div class="shopping-list">
   <div class="title">SUPER MARKET LIST</div>
   <div class="category-row">
     <div class="category" *ngFor="let category of tabs" (click)="setSelectedCategory(category)"
@@ -13,6 +13,9 @@
   <ng-template class="error-message" #notP>
     <p>There is no products in this category: {{selectedCategory.name}}</p>
   </ng-template>
-  <input type="text" class="input-product-name" placeholder="Enter name of product" [formControl]="productName" >
-  <button class="add-btn" (click)="addProduct(productName)">Add product</button>
+  <div class="add-product">
+    <input type="text" class="input-product-name" placeholder="Enter name of product" [formControl]="productName">
+    <button class="add-btn" (click)="addProduct(productName)">Add product</button>
+  </div>
+  <button class="export-btn" (click)="getCsv()">Export to CSV</button>
 </div>
