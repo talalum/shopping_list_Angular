@@ -14,27 +14,27 @@ export class ShoppingListComponent implements OnInit {
   public tabs: Category[] = [
     {
       name: Categories.MeatAndFish,
-      products: ['reere', 'b', 'aasasasa', 'reere', 'b', 'aasasasa', 'reere', 'b', 'aasasasa']
+      products: ['Skinless white meat', 'Lean cuts of red meat', 'Tuna', 'Salmon', 'Mackerel', 'Luncheon meat']
     },
     {
       name: Categories.GrainsAndBread,
-      products: ['qwsadaz`', 'bb']
+      products: ['Pasta', 'Rise', 'Bread']
     },
     {
       name: Categories.Condiments,
-      products: ['awwqw', 'bbb']
+      products: ['Salt', 'Pepper', 'Basil', 'Coriander', 'Cumin']
     },
     {
       name: Categories.Tinned,
-      products: ['aaa', 'bbbb']
+      products: ['Red kidney beans', 'White beans', 'Green lentils']
     },
     {
       name: Categories.OilAndFat,
-      products: ['aczzz', 'bbbbbad']
+      products: ['Cooking oil', 'Butter']
     },
     {
       name: Categories.DairyAndEggs,
-      products: ['asfxxa', 'asfasb']
+      products: ['Milk', 'Eggs', 'Cheese', 'Yogurt']
     },
   ];
   public selectedCategory: Category = this.tabs[0];
