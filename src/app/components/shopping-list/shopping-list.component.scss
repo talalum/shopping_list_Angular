@@ -1,23 +1,40 @@
 .shopping-list {
+  position: relative;
+  width: 100%;
 
-  &::before {
-    content: '';
-    background-image: url('../../../assets/images/back.jpeg');
-    //background-size: cover;
-    background-position: top center;
+
+  img {
     position: absolute;
     top: 0px;
-    right: 0px;
-    bottom: 0px;
     left: 0px;
-    opacity: 10%;
+    width: 100%;
+    height: auto;
+    opacity: 20%;
+    z-index: 1;
+    background-repeat: repeat;
+
   }
 
+  //&::before {
+  //  content: '';
+  //  background-image: url('../../../assets/images/back.jpeg');
+  //  //background-size: cover;
+  //  background-position: top center;
+  //  position: absolute;
+  //  top: 0px;
+  //  right: 0px;
+  //  bottom: 0px;
+  //  left: 0px;
+  //  opacity: 10%;
+  //}
+
   .title {
-    margin-top: 50px;
+    padding-top: 50px;
     text-align: center;
     color: #198fad;
     font-size: 40px;
+    z-index: 5;
+    position: relative;
   }
 
   .category-row {
@@ -31,6 +48,8 @@
     padding: 10px;
     justify-content: space-evenly;
     //color: red;
+    position: relative;
+    z-index: 5;
 
 
     .category {
@@ -57,6 +76,8 @@
     font-weight: bold;
     width: 100px;
     height: 100px;
+    position: relative;
+    z-index: 5;
   }
 
   .input-product-name {
@@ -67,6 +88,8 @@
     padding: 18px 0 0 0;
     margin-right: 8px;
     font-size: 15px;
+    position: relative;
+    z-index: 5;
   }
 
   .add-btn {
@@ -80,6 +103,8 @@
     border: none;
     padding: 10px;
     font-size: 15px;
+    position: relative;
+    z-index: 5;
 
   }
 
@@ -90,13 +115,13 @@
     height: max-content;
     border-radius: 5px;
     border: none;
-    /* padding: 10px; */
     font-size: 15px;
     display: flex;
-    /* width: 7%; */
     text-align: center;
     padding: 13px;
     margin: 30px auto;
+    position: relative;
+    z-index: 5;
   }
 
   .products-container {
@@ -110,6 +135,8 @@
     padding: 10px;
     justify-content: space-evenly;
     flex-direction: column;
+    position: relative;
+    z-index: 5;
   }
 
   .category-products {
@@ -123,19 +150,25 @@
     width: 25%;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
+    z-index: 5;
   }
 
   .delete-product {
     cursor: pointer;
+    position: relative;
+    z-index: 5;
   }
 
   .delete-product:hover {
     color: red;
   }
 
-  .add-product {
+  .add-product-section {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 5;
   }
 }
