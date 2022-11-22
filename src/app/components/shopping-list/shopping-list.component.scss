@@ -71,30 +71,44 @@
   }
 
 
-  .error-message {
-    color: red;
+  .error-message-black {
+    text-align: center;
+    color: black;
     font-weight: bold;
-    width: 100px;
-    height: 100px;
+    width: max-content;
+    height: max-content;
     position: relative;
     z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .error-message-red {
+    color: red;
+    font-weight: bold;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .input-product-name {
     width: max-content;
-    height: max-content;
+    height: 18px;
     border: none;
     border-bottom: 1px solid grey;
-    padding: 18px 0 0 0;
     margin-right: 8px;
     font-size: 15px;
     position: relative;
     z-index: 5;
+    margin-bottom: 18px;
+    padding: 9px 0 9px 4px;
   }
 
   .add-btn {
-    background-color: #8ce885;
-    color: green;
+    background-color: #01ad01;
+    color: white;
     min-width: max-content;
     min-height: max-content;
     height: 39px;
@@ -105,6 +119,11 @@
     font-size: 15px;
     position: relative;
     z-index: 5;
+    &:hover{
+      background-color: #01da01;
+      //color: #00bb00;
+
+    }
 
   }
 
@@ -122,7 +141,11 @@
     margin: 30px auto;
     position: relative;
     z-index: 5;
+    &:hover{
+      background-color: #06a5ff;
+    }
   }
+
 
   .products-container {
     max-height: 250px;
@@ -139,7 +162,7 @@
     z-index: 5;
   }
 
-  .category-products {
+  .category-product {
     padding: 10px;
     height: 29px;
     border: 1px solid green;
@@ -152,6 +175,9 @@
     align-items: center;
     position: relative;
     z-index: 5;
+    &:hover{
+      background-color: #efefef;
+    }
   }
 
   .delete-product {
@@ -170,5 +196,7 @@
     justify-content: center;
     position: relative;
     z-index: 5;
+    flex-direction: column;
+    align-items: center;
   }
 }

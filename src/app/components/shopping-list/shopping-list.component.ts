@@ -39,6 +39,7 @@ export class ShoppingListComponent implements OnInit {
   ];
   public selectedCategory: Category = this.tabs[0];
   public errorFlag: boolean = false;
+  public errorNameFlag: boolean = false;
   public productName!: FormControl;
 
   constructor(private fb: FormBuilder) {
@@ -72,6 +73,9 @@ export class ShoppingListComponent implements OnInit {
         Validators.required,
       ]);
       this.errorFlag = false;
+      this.errorNameFlag = false;
+    }else{
+      this.errorNameFlag = true;
     }
   }
 
