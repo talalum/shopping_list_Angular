@@ -146,50 +146,6 @@
     }
   }
 
-
-  .products-container {
-    max-height: 250px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    justify-content: space-evenly;
-    flex-direction: column;
-    position: relative;
-    z-index: 5;
-  }
-
-  .category-product {
-    padding: 10px;
-    height: 29px;
-    border: 1px solid green;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 25%;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-    &:hover{
-      background-color: #efefef;
-    }
-  }
-
-  .delete-product {
-    cursor: pointer;
-    position: relative;
-    z-index: 5;
-  }
-
-  .delete-product:hover {
-    color: red;
-  }
-
   .add-product-section {
     margin-top: 30px;
     display: flex;

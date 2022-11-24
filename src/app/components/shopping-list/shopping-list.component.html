@@ -5,12 +5,7 @@
     <div class="category" *ngFor="let category of tabs" (click)="setSelectedCategory(category)"
          [ngClass]="{'tab-selected' : category.name === selectedCategory.name}">{{category.name}}</div>
   </div>
-  <div class="products-container" *ngIf="!errorFlag; else notP;">
-    <div class="category-product" *ngFor="let p of selectedCategory.products; let i = index">
-      <div class="product-name">{{p}}</div>
-      <div class="delete-product" (click)="deleteProduct(i)">X</div>
-    </div>
-  </div>
+  <app-category-products-area *ngIf="!errorFlag; else notP;" [selectedCategory] = selectedCategory [tabs]="tabs" [errorFlag]="errorFlag"></app-category-products-area>
   <ng-template #notP>
     <p class="error-message-black">There is no products in this category: {{selectedCategory.name}}</p>
   </ng-template>
@@ -23,3 +18,4 @@
   </div>
   <button class="export-btn" (click)="getCsv()">Export to CSV</button>
 </div>
+

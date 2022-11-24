@@ -1,0 +1,6 @@
+<div class="category-products-area">
+    <div class="category-product" *ngFor="let p of selectedCategory?.products; let i = index">
+      <div class="product-name">{{p}}</div>
+      <div class="delete-product" (click)="deleteProduct(i)">X</div>
+  </div>
+</div>
